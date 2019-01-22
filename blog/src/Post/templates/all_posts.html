@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Posts</title>
+</head>
+<body>
+<h1>Welcome In Our Blog</h1>
+<a href="{% url 'blog:create_post' %}">Add new post</a>
+{% for post in all_posts%}
+    <h3>
+        <a href="{% url 'blog:post' post.id %}">{{post.title}}</a>
+    </h3>
+{%endfor%}
+
+</body>
+</html>
