@@ -15,7 +15,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField(default=' ')
     img = models.ImageField(upload_to='post_img/', default='post_img/20190116_185717.jpg')
-    created = models.DateTimeField(default=timezone.now)
+    created = models.DateTimeField(default= timezone.now)
 
     def __str__(self):
         '''
