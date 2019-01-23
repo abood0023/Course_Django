@@ -7,11 +7,16 @@
 <body>
 <h1>Welcome In Our Blog</h1>
 <a href="{% url 'blog:create_post' %}">Add new post</a>
-{% for post in all_posts%}
-    <h3>
-        <a href="{% url 'blog:post' post.id %}">{{post.title}}</a>
-    </h3>
-{%endfor%}
-
+<br>
+<h2>Posts</h2>
+<ul>
+    {% for post in all_posts %}
+        <li>
+            <h3>
+                <a href="{% url 'blog:post' post.id %}">{{ post.title }}</a>
+            </h3>
+        </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
